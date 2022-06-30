@@ -73,12 +73,12 @@ const ScheduleWindow = () => {
   }, [userSchedule])
 
   return (
-    <div id='schedule-window'>
-      <h1>{capitalizedUser}'s Schedule -{d.toString().split('GMT')[0].trim()}-</h1>
-      <div>
+    <div className='w-auto min-h-screen max-h-screen flex flex-col justify-between'>
+      <h1 className=' max-h-min bg-black text-white'>{capitalizedUser}'s Schedule -{d.toString().split('GMT')[0].trim()}-</h1>
+      <div className=' h-auto bg-black'>
         {userSchedule}
       </div>
-      <div>
+      <div className='bg-slate-500'>
       <Link as={'/horizon/declan/Schedule'} href={'/[company]/[user]/Schedule'}>
         <button>Show Declan's Schedule</button>
       </Link>
