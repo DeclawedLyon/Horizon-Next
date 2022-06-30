@@ -73,20 +73,20 @@ const ScheduleWindow = () => {
   }, [userSchedule])
 
   return (
-    <div className='w-auto min-h-screen max-h-screen flex flex-col justify-between'>
-      <h1 className=' max-h-min bg-black text-white'>{capitalizedUser}'s Schedule -{d.toString().split('GMT')[0].trim()}-</h1>
-      <div className=' h-auto bg-black'>
+    <div className='w-full h-full min-h-screen max-h-screen flex flex-col justify-between bg-red-400'>
+      <h1 className=' max-h-min bg-black text-white '>{capitalizedUser}'s Schedule -{d.toString().split('GMT')[0].trim()}-</h1>
+      <div className='flex flex-col  min-h-full bg-black flex-1'>
         {userSchedule}
       </div>
       <div className='bg-slate-500'>
       <Link as={'/horizon/declan/Schedule'} href={'/[company]/[user]/Schedule'}>
-        <button>Show Declan's Schedule</button>
+        <button className='cursor-pointer m-2'>Show Declan's Schedule</button>
       </Link>
       <Link as={'/horizon/tara/Schedule'} href={'/[company]/[user]/Schedule'}>
-        <button>Show Tara's Schedule</button>
+        <button className='cursor-pointer m-2'>Show Tara's Schedule</button>
       </Link>
         <Link as={'/'} href='/'>
-          <button>Home</button>
+          <button className='cursor-pointer m-2'>Home</button>
         </Link>
       </div>
       {/* {hourlyElements} */}
