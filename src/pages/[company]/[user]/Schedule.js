@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
-import ScheduleTimeSlot from '../../../components/ScheduleComponents/ScheduleTimeSlot';
-import { capitalizeFirstLetter } from '../../../src/helperFunctions';
+import ScheduleTimeSlot from '../../../../components/ScheduleComponents/ScheduleTimeSlot';
+import { capitalizeFirstLetter } from '../../../helperFunctions';
 
 const ScheduleWindow = () => {
   const d = new Date();
@@ -11,6 +11,9 @@ const ScheduleWindow = () => {
   const router = useRouter();
   const company = router.query.company;
   const currentUser = router.query.user;
+  // const capitalizeFirstLetter = (string) => {
+  //   return string.charAt(0).toUpperCase() + string.slice(1)
+  // }
   const capitalizedUser = capitalizeFirstLetter(currentUser)
   switch(today) {
     case 0:

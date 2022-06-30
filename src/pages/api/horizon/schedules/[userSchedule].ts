@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { capitalizeFirstLetter } from "../../../../src/helperFunctions";
+import { capitalizeFirstLetter } from "../../../../helperFunctions";
 const sqlite3 = require("sqlite3");
 const sqlite = require("sqlite");
 

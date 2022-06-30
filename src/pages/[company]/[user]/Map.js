@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
-import MapWindow from '../../../components/mapComponents/MapWindow'
+import MapWindow from '../../../../components/mapComponents/MapWindow'
 import Link from 'next/link'
 
 const Map = () => {
