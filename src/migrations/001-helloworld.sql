@@ -60,6 +60,7 @@ INSERT INTO Users (userName, email, companyId, userPassword) VALUES ('Tara', 'te
 INSERT INTO Users (userName, email, companyId, userPassword) VALUES ('Collin', 'test3@test.co', 1, '1234');
 INSERT INTO Users (userName, email, companyId, userPassword) VALUES ('Jason', 'test4@test.org', 1, '1234');
 INSERT INTO Users (userName, email, companyId, userPassword) VALUES ('Kate', 'test5@test.io', 1, '1234');
+INSERT INTO Users (userName, email, companyId, userPassword) VALUES ('Balthazar', 'testX@test.io', 2, '1234');
 
 INSERT INTO Schedules (nickname, startTime, endTime, cutId, taskId, date, STATUS, ownerId) VALUES ('Commanders House', '0700', '0800', '1', '', 'July, 19, 2022', 'INCOMPLETE', '1');
 INSERT INTO Schedules (nickname, startTime, endTime, cutId, taskId, date, STATUS, ownerId) VALUES ('Harbour Sign', '0800', '0900', '2', '', 'July, 19, 2022', 'INCOMPLETE', '1');

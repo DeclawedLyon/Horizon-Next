@@ -38,13 +38,12 @@ const ScheduleWindow = () => {
       dayOfWeek = "Saturday"
       break;
   }
-  console.log(d.toString())
   const [userSchedule, setUserSchedule] = useState([])
   // const []
   
   //working
   const fetchUserSchedule = async () => {
-    const response = await fetch(`../../api/horizon/schedules/${currentUser}`)
+    const response = await fetch(`../../api/horizon/schedule/${currentUser}`)
     const userSchedule = await response.json()
     console.log(userSchedule)
     // setUserSchedule(userSchedule)

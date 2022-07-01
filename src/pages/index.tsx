@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <Head >
         <title>Login</title>
       </Head>
-      <h1 className="text-xl text-cyan-500 text-start">
+      <h1 className="text-xl text-cyan-500 ">
         Welcome! 
       </h1>
       <Link as={'/horizon/declan/Map'} href={'/[company]/[user]/Map'}>
@@ -24,6 +24,9 @@ const Home: NextPage = () => {
       </Link>
       <Link as={'/horizon/declan/Profile'} href={'/[company]/[user]/Profile'}>
         <button className="bg-sky-500 hover:bg-sky-700 px-5 py-3 text-white rounded-lg">Profile Page</button>
+      </Link>
+      <Link as={'/horizon/Scheduler'} href={'/[company]/Scheduler'}>
+        <button className="bg-sky-500 hover:bg-sky-700 px-5 py-3 text-white rounded-lg">Admin Page</button>
       </Link>
     </div>
   )
