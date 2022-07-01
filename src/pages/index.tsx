@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <Link as={'/horizon/declan/Profile'} href={'/[company]/[user]/Profile'}>
         <button className="bg-sky-500 hover:bg-sky-700 px-5 py-3 text-white rounded-lg">Profile Page</button>
       </Link>
-      <Link as={'/horizon/Scheduler'} href={'/[company]/Scheduler'}>
+      <Link as={'/horizon/AdministrationPage'} href={'/[company]/AdministrationPage'}>
         <button className="bg-sky-500 hover:bg-sky-700 px-5 py-3 text-white rounded-lg">Admin Page</button>
       </Link>
     </div>

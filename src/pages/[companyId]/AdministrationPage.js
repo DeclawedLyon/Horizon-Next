@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import EditSchedule from '../../../components/adminComponents/editSchedule';
+import EditSchedule from '../../components/adminComponents/editSchedule';
 
 const admin = () => {
   const router = useRouter();
