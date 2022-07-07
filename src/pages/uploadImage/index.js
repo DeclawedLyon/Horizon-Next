@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import TransformImage from "../../components/userInterfaceComponents/TransformImage";
 
-const cloudinaryAccount = "dhg4kzytf";
+const cloudinaryAccount = "ncjeowal2u34o";
 const uploadPreset = 'frpa1olz'
 
 const IndexPage = () => {

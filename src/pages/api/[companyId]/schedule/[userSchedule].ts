@@ -5,8 +5,8 @@ const sqlite = require("sqlite");
 
 export default async function getScheduleByUserId(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const userName = req.query.userSchedule
-    const capitalizedName = capitalizeFirstLetter(userName);
+    const userId = req.query.userSchedule
+    // const capitalizedName = capitalizeFirstLetter(userName);
 
     const openDb = async function() {
       return sqlite.open({
@@ -17,12 +17,12 @@ export default async function getScheduleByUserId(req: NextApiRequest, res: Next
     const getUserSchedules = async (date: string) => {
       const test = date;
       const db = await openDb();
-      const userId = await db.all(`SELECT id FROM Users WHERE userName = "${capitalizedName}"`)
+      // const userId = await db.all(`SELECT id FROM Users WHERE userName = "${capitalizedName}"`)
 
       const userSchedule = await db.all(`SELECT a.*, b.* FROM Users as a
       LEFT JOIN Schedules as b
       ON a.id = b.ownerId
-      WHERE a.id = ${userId[0].id}
+      WHERE a.id = ${userId}
       `)
 
       return userSchedule
