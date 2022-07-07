@@ -9,12 +9,12 @@ const ScheduleWindow = () => {
   const today = d.getDay();
   let dayOfWeek;
   const router = useRouter();
-  const company = router.query.company;
-  const currentUser = router.query.user;
+  const companyId = router.query.company;
+  const userId = router.query.userId;
   // const capitalizeFirstLetter = (string) => {
   //   return string.charAt(0).toUpperCase() + string.slice(1)
   // }
-  const capitalizedUser = currentUser ? capitalizeFirstLetter(currentUser) : ''
+  // const capitalizedUser = currentUser ? capitalizeFirstLetter(currentUser) : ''
   switch(today) {
     case 0:
       dayOfWeek = "Sunday"
@@ -43,7 +43,8 @@ const ScheduleWindow = () => {
   
   //working
   const fetchUserSchedule = async () => {
-    const response = await fetch(`../../api/horizon/schedule/${currentUser}`)
+    console.log(companyId, userId)
+    const response = await fetch(`../../api/${companyId}/schedule/${userId}`)
     const userSchedule = await response.json()
     console.log(userSchedule)
     // setUserSchedule(userSchedule)
@@ -73,7 +74,7 @@ const ScheduleWindow = () => {
 
   return (
     <div className='w-full h-full min-h-screen max-h-screen flex flex-col justify-between bg-red-400'>
-      <h1 className=' max-h-min bg-black text-white '>{capitalizedUser}'s Schedule -{d.toString().split('GMT')[0].trim()}-</h1>
+      <h1 className=' max-h-min bg-black text-white '>{}'s Schedule -{d.toString().split('GMT')[0].trim()}-</h1>
       <div className='flex flex-col  min-h-full bg-black flex-1'>
         {userSchedule}
       </div>
